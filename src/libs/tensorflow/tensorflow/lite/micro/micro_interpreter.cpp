@@ -280,7 +280,6 @@ TfLiteStatus MicroInterpreter::Invoke() {
   if (!tensors_allocated_) {
     TF_LITE_ENSURE_OK(&context_, AllocateTensors());
   }
-
   return graph_.InvokeSubgraph(0);
 }
 
